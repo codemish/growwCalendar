@@ -10,6 +10,9 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "jetifier": "^2.0.0",
+    "jetify": "^1.0.2",
+    "npx": "^10.2.2",
     "react": "17.0.2",
     "react-native": "0.66.4"
   },

@@ -1,11 +1,10 @@
-const getWeekNumber = async todayDate => {
-  var oneJan = new Date(todayDate.getFullYear(), 0, 1);
-  var numberOfDays = Math.floor((todayDate - oneJan) / (24 * 60 * 60 * 1000));
+function getWeekNumber(date) {
+  const firstDayOfYear = new Date(date.getFullYear(), 0, 1);
+  const pastDaysOfYear = (date - firstDayOfYear) / 86400000;
   alert(
-    `The Week No. of the year ${todayDate.getFullYear()} :- ` +
-      Math.ceil((todayDate.getDay() + 1 + numberOfDays) / 7),
+    `The Week No. of the year ${date.getFullYear()} :- ` +
+      Math.ceil((pastDaysOfYear + firstDayOfYear.getDay() + 1) / 7),
   );
-  return result;
-};
-
+  return;
+}
 export {getWeekNumber};
