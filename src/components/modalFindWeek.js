@@ -39,9 +39,6 @@ const modalFindWeek = props => {
   for (var i = 1; i <= 31; i++) {
     dayArray.push(i);
   }
-  useEffect(() => {
-    console.log(props);
-  }, []);
   return (
     <View style={styles.cemterView}>
       <Modal

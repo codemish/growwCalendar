@@ -3,10 +3,8 @@ import {
   View,
   Text,
   ScrollView,
-  TextInput,
   TouchableOpacity,
   Dimensions,
-  StatusBar,
   StyleSheet,
 } from 'react-native';
 import Modal from './src/components/modalGoToDate';
@@ -15,7 +13,6 @@ import Calendar from './Calendar';
 const {width, height} = Dimensions.get('window');
 const proportionHeight = height / 684.5;
 const proportionWidth = width / 411.4;
-
 const App = () => {
   var years = [];
   const [modalVisibleGoToDate, setmodalVisibleGoToDate] = useState(false);
@@ -27,9 +24,7 @@ const App = () => {
   for (var i = 2020; i <= 2025; i++) {
     years.push(i);
   }
-  useEffect(() => {
-    console.log(selectedYear, selectedMonth);
-  });
+
   const months = [
     'January',
     'February',
@@ -73,7 +68,6 @@ const App = () => {
       <View style={styles.titleView}>
         <Text style={styles.titleText}>Groww Calender</Text>
       </View>
-
       <ScrollView
         contentOffset={{
           x: 0,

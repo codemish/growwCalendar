@@ -73,8 +73,7 @@ const Calendar = props => {
                   : 0,
 
               alignSelf: 'center',
-            }}
-            onPress={() => console.log(item)}>
+            }}>
             {item != -1 ? item : ''}{' '}
           </Text>
         </View>
